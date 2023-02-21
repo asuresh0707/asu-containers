@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: capod
+spec:
+  containers:
+    - name: alpine
+      image: alpine:3.14
+      command: ["printenv"]
+      args: ["HOSTNAME", "KUBERNETES_PORT"]
+  restartPolicy: OnFailure
